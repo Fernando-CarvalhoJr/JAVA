@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exivição de variavel</title>
+</head>
+<body>
+
+<h1 id="soma"></h1>
+<h1 id="subtração"></h1>
+<h1 id="multiplicação"></h1>
+<h1 id="divizão"></h1>
+
+    <script>
+
+// let numero1 = 10;
+// let numero2 = 5;
+
+// let soma= numero1 + numero2;
+
+// console.log("soma " + soma);
+
+// let subtração= numero1 - numero2;
+
+// console.log("subtração " + subtração);
+
+// let multiplicação= numero1 * numero2;
+
+// console.log("multiplicação " + multiplicação);
+
+// let divizão= numero1 / numero2;
+
+// console.log("divizão " + divizão);
+
+// alert (soma);
+// alert (subtração);
+// alert (multiplicação);
+// alert (divizão);
+
+// document.getElementById ("soma" + "subtração" + "multiplicação" + "divizão").innerHTML = soma + subtração + multiplicação + divizão;
+
+let peso = prompt("Digite seu peso");
+let altura = prompt("digite sua altura");
+
+let imc = (peso) / (altura * altura);
+alert("imc= " + imc.toFixed(1));
+
+if (imc < 18.5) {
+    alert("imc= " + imc.toFixed(1));
+}
+
+    </script> 
+
+</body>
+</html>
