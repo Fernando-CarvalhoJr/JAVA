@@ -121,54 +121,105 @@
 
 // ----------------------------------------//------------------------------------------
 
-let pontos = prompt ("Digite a quantidade de pontos que você alcançou")
-let nvl = prompt ("Digite a dificuldade da fase. Fácil - Médio - Difícil")
+// let pontos = prompt ("Digite a quantidade de pontos que você alcançou")
+// let nvl = prompt ("Digite a dificuldade da fase. Fácil - Médio - Difícil")
 
-let pts;
+// let pts;
 
-switch (nvl) {
-    case "Difícil":
-        pts = pontos * 3;
-        break;
-    case "Dificil":
-        pts = pontos * 3;
-        break;
-    case "difícil":
-        pts = pontos * 3;
-        break;
-    case "dificil":
-        pts = pontos * 3;
-        break;
-    case "Médio":
-        pts = pontos * 2;
-        break;
-    case "Medio":
-        pts = pontos * 2;
-        break;
-    case "médio":
-        pts = pontos * 2;
-        break;
-    case "medio":
-        pts = pontos * 2;
-        break;
-    case "Fácil":
-        pts = pontos * 1;
-        break;
-    case "Facil":
-        pts = pontos * 1;
-        break;
-    case "fácil":
-        pts = pontos * 1;
-        break;
-    case "facil":
-        pts = pontos * 1;
-        break;
-    default:
-        alert("Digite pontos válidos e a dificuldade correta e tente novamente")
-}
-if (pts){
-alert(pts + " pontos");
-}
+// switch (nvl) {
+//     case "Difícil":
+//         pts = pontos * 3;
+//         break;
+//     case "Dificil":
+//         pts = pontos * 3;
+//         break;
+//     case "difícil":
+//         pts = pontos * 3;
+//         break;
+//     case "dificil":
+//         pts = pontos * 3;
+//         break;
+//     case "Médio":
+//         pts = pontos * 2;
+//         break;
+//     case "Medio":
+//         pts = pontos * 2;
+//         break;
+//     case "médio":
+//         pts = pontos * 2;
+//         break;
+//     case "medio":
+//         pts = pontos * 2;
+//         break;
+//     case "Fácil":
+//         pts = pontos * 1;
+//         break;
+//     case "Facil":
+//         pts = pontos * 1;
+//         break;
+//     case "fácil":
+//         pts = pontos * 1;
+//         break;
+//     case "facil":
+//         pts = pontos * 1;
+//         break;
+//     default:
+//         alert("Digite pontos válidos e a dificuldade correta e tente novamente")
+// }
+// if (pts){
+// alert(pts + " pontos");
+// }
+
+// -----------------------------------------//----------------------------------
+
+// let numero = prompt("Digite um número: ")
+
+// let contador = 1;
+
+// while (contador <= numero) {
+
+//     if (contador +2){
+
+//         alert(contador)
+//     }
+//         contador++;
+// }
+
+// ------------------------------------//--------------------------------
+
+// let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+
+// let palpite;
+
+// let tentativas = 0
+
+// do {
+//     palpite = prompt("Digite um número entre 1 e 100");
+//     tentativas++;
+
+//     if (palpite == numeroAleatorio) {
+//         alert("Parabéns, você acertou o número em: " + tentativas + " tentativas!");
+//     } else if(palpite < numeroAleatorio) {
+//         alert("O número é maior! Tente novamente.");
+//     } else {
+//         alert("O número é menor! Tente novamente.");
+//     }
+
+// } while (palpite !== numeroAleatorio);
+
+// ---------------------------------------//---------------------------------
+
+let i = prompt("Digite o número desejado");
+let mult = 0;
+
+while (mult <= 9) {
+    mult++;
+
+    if (mult) {
+        let final = mult * i;
+        alert(i + " x " + mult + " = " + final)
+        }
+    }
 
 </script>
 
