@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let palavaSecreta = prompt("Digite a palavra secreta").toUpperCase();
+    let tamanhoPalavra = palavaSecreta.length;
+    let letrasJaChutadas = "";
+    let letrasErradas = "";
+    let letrasAcertadas = "";
+    let tentativas = 0;
+    const maxTentativas = 6;
+
+    for (let i = 0; i < tamanhoPalavra; i++){
+        letrasAcertadas += "_";
+    }
+
+    while (tentativas < maxTentativas){
+        let letrasChutada = prompt(`Palavra: ${letrasAcertadas}\nTentativas: ${tentativas}\nLetras já chutadas: ${letrasJaChutadas}\nLetras erradas: ${letrasErradas}\nDigite uma letra: `).toUpperCase();
+    
+    if (letrasJaChutadas.includes(letrasChutada) || letrasAcertadas.includes(letrasChutada) || letrasErradas.includes(letrasChutada)){
+        alert("Você já chutou essa letra! Tente outra.");
+        continue;
+    }
+
+    if (palavaSecreta.includes(letrasChutada)){
+        for (let i = 0; i < tamanhoPalavra; i++){
+            if (palavaSecreta[i] === letrasChutada){
+                letrasAcertadas = letrasAcertadas.substr(0, i) + letrasChutada + letrasAcertadas.substr(i + 1);
+            }
+        }
+    }
+
+    if (letrasAcertadas === palavaSecreta){
+        alert(`Parabéns! Você acertou a palavra secreta "${palavraSecreta}" com ${tentativas + 1} tentativas.`);
+        break;
+    } else{
+        letrasErradas += tentativas++;
+        if (tentativas === maxTentativas){
+            alert(`Game Over! A palavra secreta era "${palavraSecreta}".`);
+        }
+    }
+    letrasJaChutadas += letrasChutada + " ";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
