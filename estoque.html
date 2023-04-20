@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let estoque = [] // array para armazenar os itens do estoque
+
+    while (true) {  // loop infinito para o programa continuar executando até o usuário decida sair
+        let opcao = prompt("Escolha uma opção:\n1 - Adicionar um novo item\n2 - Remover um Item\n3 - Exibir lista de produtos\n4 - Sair") // '\n' é utilizado para inserir um quebra de linha
+
+        if (opcao === "1") {  // Opção para adicionar um novo item no estoque
+            let novoItem = prompt("Digite o novo item");
+            estoque.push(novoItem);
+            alert(`O item "${novoItem}" foi adicionado ao estoque.`);
+        } else if (opcao === "2") {  // Opção para remover um item no estoque
+            let itemExcluido = prompt("Digite o item que você quer excluir");
+            let index = estoque.indexOf(itemExcluido);
+            if (index !== -1) {
+                estoque.splice(index, 1);
+            alert(`O item "${itemExcluido}" foi excluido do estoque.`);
+            } else {
+                alert(`O item "${itemExcluido} não existe no estoque.`);
+            }
+
+// Index é uma variavel que armazena o indice (posição) do item que o usuario deseja remover do array
+// IndexOf() é utilizada para encontrar a posição do array
+// se o elemento não estiver presente no meu array, a função indexOf() retorna -1. Por isso, a condição if (index !== -1)
+// A função splice() recebe dois parametros: o primeiro é o indice do elemento (index) que deve ser removido e o segundo é a quantidade de elementos.
+
+        } else if (opcao === "3") {  // opção para exibir a lista
+            let listaItens = "";
+            estoque.forEach(function(item){
+                listaItens += item + "\n";
+            });
+            alert(`Itens no esoque:\n${listaItens}`);
+
+// O forEach percorre o array utilizando uma função que tem como objetivo mostrar os itens de uma maneira "formatada"
+// O Operador += é tilizado para concatenar o valor atual do item com o valor anterior da variavel listaItens que é uma string vazia
+            } else if (opcao === "4") { //opção para sair do programa
+                alert("O programa foi encerrado");
+                break;
+            } else{
+                alert("Opção inválida. Tente novamente")
+            }
+        }
+</script>
+
+</body>
+</html>
